@@ -1,32 +1,18 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var id = 5;
-var company = 'traversy Media';
-var isPublished = true;
-var x = 'Hello';
-var ids = [1, 2, 3, 4];
-var arr = [1, true, 'Hello'];
-var person = [1, 'erivanio', true];
-var employee;
+"use strict";
+let id = 5;
+let company = 'traversy Media';
+let isPublished = true;
+let x = 'Hello';
+let ids = [1, 2, 3, 4];
+let arr = [1, true, 'Hello'];
+let person = [1, 'erivanio', true];
+let employee;
 employee = [
     [1, 'Brow'],
     [2, 'John'],
     [3, 'Brad']
 ];
-var pid;
+let pid;
 pid = '22';
 //enum
 var Direction1;
@@ -43,14 +29,14 @@ var Direction2;
     Direction2["Left"] = "Left";
     Direction2["Right"] = "Right";
 })(Direction2 || (Direction2 = {}));
-var usuario = {
+const usuario = {
     id: 12,
-    nome: 'Erivanio'
+    nome: 'Erivanio',
 };
 //type assertion
-var cid = 1;
+let cid = 1;
 //let customerId = <number> cid;
-var customerId = cid;
+let customerId = cid;
 customerId = true;
 console.log(addNum(1, 2));
 //functions 
@@ -60,41 +46,37 @@ function addNum(x, y) {
 function message(x) {
     console.log(x);
 }
-var usuario1 = {
+const usuario1 = {
     id: 1,
     nome: 'Paulo',
     idade: 39
 };
-var add = function (x, y) { return x + y; };
-var sub = function (x, y) { return x - y; };
+const add = (x, y) => x + y;
+const sub = (x, y) => x - y;
 //classes
-var Person = /** @class */ (function () {
-    function Person(id, nome) {
+class Person {
+    constructor(id, nome) {
         this.id = id,
             this.nome = nome;
     }
-    Person.prototype.registro = function () {
-        return "".concat(this.nome);
-    };
-    return Person;
-}());
-var Empregado = /** @class */ (function (_super) {
-    __extends(Empregado, _super);
-    function Empregado(id, nome, cargo) {
-        var _this = _super.call(this, id, nome) || this;
-        _this.cargo = cargo;
-        return _this;
+    registro() {
+        return `${this.nome}`;
     }
-    return Empregado;
-}(Person));
-var brad = new Person(1, 'Brad Traversy');
-var mike = new Person(2, 'Mike Jordan');
-var empregadoNew = new Empregado(3, 'Marcos', 'Analista');
+}
+class Empregado extends Person {
+    constructor(id, nome, cargo) {
+        super(id, nome);
+        this.cargo = cargo;
+    }
+}
+const brad = new Person(1, 'Brad Traversy');
+const mike = new Person(2, 'Mike Jordan');
+const empregadoNew = new Empregado(3, 'Marcos', 'Analista');
 console.log(empregadoNew.registro());
 //generics
 function getArray(items) {
     return new Array().concat(items);
 }
-var numArray = getArray([1, 2, 3]);
-var strArray = getArray(["ola", 'estou', 'arqui']);
+let numArray = getArray([1, 2, 3]);
+let strArray = getArray(["ola", 'estou', 'arqui']);
 numArray.push('teste');
