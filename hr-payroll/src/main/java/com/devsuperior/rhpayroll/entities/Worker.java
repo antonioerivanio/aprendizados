@@ -2,7 +2,6 @@
 package com.devsuperior.rhpayroll.entities;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class Worker implements Serializable {    
   

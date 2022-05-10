@@ -4,8 +4,6 @@ package com.aula10.ms.hrworks.domains;
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.annotation.Generated;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
